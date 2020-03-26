@@ -305,7 +305,7 @@ parseSymbol(size_t size) {
         r = false;
         str_Free(value);
     } else {
-        strncpy(lex_Current.value.string, str_String(symbolName), sizeof(lex_Current.value.string));
+        strncpy(lex_Current.value.string, str_String(symbolName), sizeof(lex_Current.value.string) - 1);
         r = true;
     }
 
